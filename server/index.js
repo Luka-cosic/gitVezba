@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 6000;
 // app.use(bodyParser.json({limit:"30mb", extended:true}));
 // app.use(cors());
 
-
+app.get("/", (req,res) => {
+    res.json({rec: "samotako"})
+    
+});
 app.get("/user", (req,res) => {
     res.json({rec: "samotako"})
     
