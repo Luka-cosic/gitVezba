@@ -13,13 +13,12 @@ const PORT = process.env.PORT || 6000;
 // app.use(cors());
 
 app.get("/", (req,res) => {
-    console.log('radi');
     
     res.json({rec: "samotako"})
     
 });
 app.get("/user", (req,res) => {
-    res.json({rec: "samotako"})
+    res.json({rec: "Podaci nakon klika"})
     
 });
 app.get("/sarma", (req,res) => {
