@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 6000;
 // app.use(cors());
 
 app.get("/", (req,res) => {
+    console.log('radi');
+    
     res.json({rec: "samotako"})
     
 });
