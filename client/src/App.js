@@ -1,15 +1,25 @@
 
 import './App.css';
-import axios from "axios";
+import { getServer  } from './api/index.js';
 
 function App() {
 
+  
+
   const handleServer = async ()=>{
+    try {
+      const {data} = await getServer();
+      console.log(data);
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
     // fetch("/user")
     //   .then((res) => res.json())
     //   .then((data) => console.log(data));
-   const {data} = await axios.get("/user");
-    console.log(data);
+   
+   
     
   }
   return (

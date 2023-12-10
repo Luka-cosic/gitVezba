@@ -1,31 +1,31 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from 'body-parser';
+import { createServer } from "http";
+
 
 
 const app = express();
-
+const httpServer = createServer(app);
 
 const PORT = process.env.PORT || 6000;
 
-// app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
-// app.use(bodyParser.json({limit:"30mb", extended:true}));
-// app.use(cors());
+app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
+app.use(bodyParser.json({limit:"30mb", extended:true}));
+app.use(cors());
 
 app.get("/", (req,res) => {
+    console.log("connected");
     
-    res.json({rec: "samotako"})
-    
-});
-app.get("/user", (req,res) => {
-    res.json({rec: "Podaci nakon klika"})
-    
-});
-app.get("/sarma", (req,res) => {
     res.json({rec: "samotako"})
     
 });
 
-app.listen(PORT, () => {
+app.get("/sarma", (req,res) => {
+    res.json({rec: "Samo Jako"})
+    
+});
+
+httpServer.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
   });
