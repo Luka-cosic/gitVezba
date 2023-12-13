@@ -7,4 +7,4 @@ import axios from "axios";
 //  });
 
 
-export const getServer = ()=>{ return axios.get("/sarma", {text: "Milojko"}); }
+export const getServer = ()=>{ return axios.get("https://gitv-bba08ca16481.herokuapp.com/sarma", {text: "Milojko"}); }
