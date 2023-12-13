@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 import bodyParser from 'body-parser';
 import { createServer } from "http";
-
-
+import dotenv from "dotenv";
 
 const app = express();
+const result = dotenv.config();
 const httpServer = createServer(app);
 
 const PORT = process.env.PORT || 6000;
